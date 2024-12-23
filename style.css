@@ -268,10 +268,17 @@ section {
 }
 
 .about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  gap: 1rem;
+  width: 100%; /* Allow the container to grow */
+  max-width: 100%; /* Prevent overflow */
 }
+
+
+
 
 .about-details-container {
   justify-content: center;
@@ -284,8 +291,15 @@ section {
 }
 
 .about-pic {
-  border-radius: 2rem;
+  width: 100%; /* Full width of the container */
+  max-width: 450px; /* Cap the width for large screens */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure no distortion */
+  border-radius: 2rem; /* Rounded corners for styling */
+  display: block; /* Proper block rendering */
+  margin: 0 auto; /* Center the image */
 }
+
 
 .arrow {
   position: absolute;
@@ -340,7 +354,6 @@ section {
   align-items: center;
 }
 
-
 article {
   display: flex;
   width: 10rem;
@@ -358,9 +371,9 @@ article .icon {
   position: relative;
 }
 
-.color-container {
+#projects .color-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack projects vertically */
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -370,11 +383,11 @@ article .icon {
 }
 
 
-.project-img {
+#projects .project-img {
   border-radius: 2rem;
-  width: 100%;         /* Ensure the image takes full width of its container */
-  height: 300px;       /* Set a fixed, uniform height */
-  object-fit: cover;   /* Ensures the image is cropped while maintaining aspect ratio */
+  width: 100%;
+  height: 300px; /* Ensure uniform height */
+  object-fit: cover; /* Crop proportionally without distortion */
 }
 
 .project-title {

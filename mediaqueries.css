@@ -101,3 +101,25 @@
     text-align: justify;
   }
 }
+
+/* Default size for larger screens */
+.about-pic {
+  width: 100%; /* Responsive to the container */
+  max-width: 600px; /* Larger max-width for bigger screens */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* For medium screens (e.g., tablets) */
+@media screen and (max-width: 768px) {
+  .about-pic {
+    max-width: 450px; /* Scale down for tablets */
+  }
+}
+
+/* For small screens (e.g., mobile phones) */
+@media screen and (max-width: 480px) {
+  .about-pic {
+    max-width: 300px; /* Scale down further for smaller screens */
+  }
+}
+
