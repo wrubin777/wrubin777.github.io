@@ -267,6 +267,32 @@ section {
   position: relative;
 }
 
+/* ── ABOUT SECTION LAYOUT FIX ── */
+#about .section-container {
+  display: flex;               /* side-by-side */
+  align-items: flex-start;     /* top-align image + cards */
+  gap: 3rem;                   /* breathing room between image & details */
+}
+
+#about .section__pic-container {
+  flex: 0 0 300px;             /* fixed 300px width box (tweak as you like) */
+  width: 300px;
+  height: auto;                /* let the img inside size itself */
+  margin: 0;                   /* no auto centering here */
+}
+
+#about .about-pic {
+  width: 100%;                 /* fill the 300px container */
+  height: auto;                /* preserve aspect ratio */
+  object-fit: cover;           /* crop to fill without distortion */
+}
+
+#about .about-details-container {
+  flex: 1;                     /* take all remaining horizontal space */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;                 /* space between cards and paragraph */
+}
 .about-containers {
   display: flex;
   justify-content: center;
@@ -277,12 +303,13 @@ section {
   max-width: 100%; /* Prevent overflow */
 }
 
-
-
-
 .about-details-container {
   justify-content: center;
   flex-direction: column;
+}
+
+#about .text-container {
+  margin-top: 2rem;
 }
 
 .about-containers,
@@ -333,6 +360,12 @@ section {
 #experience {
   position: relative;
 }
+
+/* under your existing EXPERIENCE rules */
+#experience .about-containers {
+  align-items: flex-start;
+}
+
 
 .experience-sub-title {
   color: rgb(85, 85, 85);
